@@ -1,0 +1,7 @@
+@mixin single-box-shadow($color, $x: 0, $y: 0, $blur: 15px, $spread: 3px) {
+  box-shadow: $x $y $blur $spread $color;
+}
+
+@mixin background-color-alpha($color, $alpha: 0.2) {
+  background-color: rgba($color, $alpha);
+}

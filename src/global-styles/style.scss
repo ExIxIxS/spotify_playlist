@@ -1,15 +1,35 @@
 /// Main Styles File
 /// Here we import all the global Styles files we need for our project.
 
+@use "styles/pallete.scss" as pallete;
+
 @import "styles/normalize.scss";
-@import "styles/root.scss";
 @import "styles/fonts.scss";
 
-body {
-  font-family: 'Roboto', sans-serif;
-  color: var(--color-primary);
+html {
+  box-sizing: border-box;
 }
 
-p {
-  color: var(--color-on-surface);
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+body {
+  background-color: pallete.get-color(background, main);
+}
+
+
+/* Extra small devices (phones) */
+@media only screen and (max-width: 833px) {
+
+}
+
+/* Medium devices (tablets) */
+@media only screen and (min-width: 834px) {
+
+}
+
+/* Large devices (laptops and desktops) */
+@media only screen and (min-width: 1400px) {
+
 }

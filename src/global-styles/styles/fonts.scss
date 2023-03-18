@@ -1,4 +1,78 @@
 /// Main Fonts File
 /// Here we import all the fonts files we need for our project.
 
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;500;700&display=swap');
+
+body {
+  font-family: 'Lato', sans-serif;
+  color: pallete.get-color(primary, main-contrast);
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0;
+  font-weight: 500;
+}
+
+h1 {
+  font-weight: 700;
+  font-size: 48px;
+  letter-spacing: -0.04em;
+  line-height: 100%;
+}
+
+h2 {
+  font-weight: 400;
+  font-size: 18px;
+  letter-spacing: 0;
+  line-height: 22px;
+}
+
+h3 {
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 0;
+  line-height: 19px;
+}
+
+h4 {
+  font-weight: 400;
+  font-size: 16px;
+  letter-spacing: -0.04em;
+  line-height: 19px;
+}
+
+/* Extra small devices (phones) */
+@media only screen and (max-width: 833px) {
+
+}
+
+/* Medium devices (tablets) */
+@media only screen and (min-width: 834px) {
+
+}
+
+/* Large devices (laptops and desktops) */
+@media only screen and (min-width: 1400px) {
+  h1 {
+    font-size: 68px;
+  }
+
+  h2 {
+    letter-spacing: -0.04em;
+  }
+
+  h3 {
+    font-weight: 700;
+  }
+
+  h4 {
+    font-weight: 500;
+    letter-spacing: 0;
+  }
+
+  p {
+    font-weight: 700;
+    font-size: 16px;
+    letter-spacing: 0;
+    line-height: 19px;
+  }
+}

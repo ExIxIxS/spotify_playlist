@@ -1,0 +1,37 @@
+
+$base-background: #000000;
+
+$palette: (
+    background: (
+        main: #121212,
+        base: $base-background,
+        alpha-70: rgba($base-background, 0.7),
+        alpha-50: rgba($base-background, 0.5),
+        alpha-20: rgba($base-background, 0.2),
+        static: #18181C,
+        hover: #292929,
+        active: #444444,
+        button: #65d36e,
+    ),
+    primary: (
+        main-contrast: #ffffff,
+    )
+);
+
+
+@function get-color($color-branch, $color){
+    @if map-has-key($palette, $color-branch){
+        $color-branch: map-get($palette, $color-branch);
+
+        @if map-has-key($color-branch,$color){
+            $color: map-get($color-branch,$color);
+            @return $color;
+        }
+
+        @warn "unknown color `#{$color}` in color branch";
+        @return null;
+    }
+
+    @warn "unknown color branch `#{$color-branch}` in palette";
+    @return null;
+}
