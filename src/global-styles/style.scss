@@ -18,6 +18,25 @@ body {
   background-color: pallete.get-color(background, main);
 }
 
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+}
+
+button {
+  border-width: 0;
+  padding: 0;
+  color: inherit;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
 
 /* Extra small devices (phones) */
 @media only screen and (max-width: 833px) {
@@ -30,6 +49,6 @@ body {
 }
 
 /* Large devices (laptops and desktops) */
-@media only screen and (min-width: 1400px) {
+@media only screen and (min-width: 1440px) {
 
 }

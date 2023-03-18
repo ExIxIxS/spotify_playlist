@@ -8,14 +8,67 @@
   </head>
 
   <body>
-    <main class="playlist-page">
-      <h1>H1</h1>
-      <h2>H2</h2>
-      <h3>H3</h3>
-      <h4>H4</h4>
-      <p>p</p>
-    </main>
+    <div class="playlist-page">
+      <header class="playlist-page-header-component">
+        <nav class="playlist-page-navigation-component">
+          <div class="playlist-page-navigation-component__buttons-container">
+            <div class="playlist-page-navigation-component__nav-buttons-container">
+              <button class="playlist-page-navigation-component__nav-button"
+                    type="button">
+                <div class="playlist-page-navigation-component__nav-button-icon">
+                  <img src="./src/pages/playlist-page/assets/icons/arrow-icon.svg"
+                      class="playlist-page-navigation-component__arrow-icon-img playlist-page-navigation-component__nav-button--left"
+                      alt="topic icon"
+                      width="10.57"
+                      height="18">
+                </div>
+              </button>
 
+              <button class="playlist-page-navigation-component__nav-button playlist-page-navigation-component__nav-button--right"
+                    type="button">
+                <div class="playlist-page-navigation-component__nav-button-icon">
+                  <img src="./src/pages/playlist-page/assets/icons/arrow-icon.svg"
+                    class="playlist-page-navigation-component__arrow-icon-img"
+                    alt="topic icon"
+                    width="10"
+                    height="18">
+                </div>
+            </button>
+            </div>
+            <button class="playlist-page-navigation-component__user-button"
+                    type="button">
+                <div class="playlist-page-navigation-component__user-button-icon">
+                  <img src="./src/pages/playlist-page/assets/img/user-icon.jpg"
+                      class="playlist-page-navigation-component__arrow-icon-img"
+                      alt="topic icon"
+                      width="38"
+                      height="38">
+                </div>
+                <p class="playlist-page-navigation-component__user-name">Julita Gomez</p>
+            </button>
+          </div>
+        </nav>
+        <div class="playlist-page-header-component__content-container">
+          <h1 class="playlist-page-header-component__title">
+            Top songs of the world
+          </h1>
+          <h4 class="playlist-page-header-component__subtitle">
+            Playlist
+          </h4>
+          <h4 class="playlist-page-header-component__description">
+            Popular songs of Dua Lipa and many many others
+          </h4>
+        </div>
+
+      </header>
+      <main>
+        <h1>H1</h1>
+        <h2>H2</h2>
+        <h3>H3</h3>
+        <h4>H4</h4>
+        <p>p</p>
+      </main>
+    </div>
     <script type="module" src="./src/global-scripts/main.js"></script>
   </body>
 </html>
