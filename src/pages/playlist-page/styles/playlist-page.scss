@@ -5,7 +5,20 @@
   display: flex;
   flex-direction: column;
 
-  background-color: pallete.get-color(background, button);
+  /* Extra small devices (phones) */
+  @media only screen and (max-width: 833px) {
+    min-width: 375px;
+  }
+
+  /* Medium devices (tablets) */
+  @media only screen and (min-width: 834px) {
+
+  }
+
+  /* slarge devices (laptops and desktops) */
+  @media only screen and (min-width: 1440px) {
+    width: 1440px;
+  }
 }
 
 .playlist-page-header-component {
@@ -14,10 +27,10 @@
   background-position: right 15% top 0;
   background-size: cover;
 
-  &__content-container {
+  & &__content-container {
     width: 316px;
-    position: absolute;
-    top: 236px;
+    position: relative;
+    top: 151px;
     left: 32px;
     display: flex;
     flex-direction: column;
@@ -25,19 +38,46 @@
     gap: 16px
   }
 
-  &__title {
+  & &__title {
     order: 1;
     width: 238px;
   }
 
-  &__subtitle {
+  & &__subtitle {
     order: 0;
   }
 
-  &__description {
+  & &__description {
     order: 2;
     color: pallete.get-color(primary, complimentary-contrast);
   }
+
+  /* Extra small devices (phones) */
+  @media only screen and (max-width: 833px) {
+  }
+
+  /* Medium devices (tablets) */
+  @media only screen and (min-width: 834px) {
+    background-position: right 50% top 0;
+  }
+
+  /* large devices (laptops and desktops) */
+  @media only screen and (min-width: 1440px) {
+    background-position: right 0 top -68px;
+    background-size: cover;
+
+    & &__content-container {
+      width: 356px;
+      top: 71px;
+      left: 50px;
+      gap: 24px
+    }
+
+    & &__title {
+      width: 338px;
+    }
+  }
+
 }
 
 .playlist-page-navigation-component {
@@ -46,55 +86,53 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  position: sticky;
+  top: 0;
 
-  &__buttons-container {
+  & &__buttons-container {
     width: 100%;
     display: flex;
     justify-content: space-between;
     margin: 0 16px;
   }
 
-  &__nav-buttons-container {
+  & &__nav-buttons-container {
     width: 116px;
     display: flex;
     justify-content: space-between;
   }
 
-  &__nav-button {
+  & &__nav-button {
     width: 46px;
     height: 46px;
     background-color: pallete.get-color(background, alpha-50);
     border-radius: 53.3px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
   }
 
-  &__nav-button:hover {
+  & &__nav-button:hover {
     cursor: not-allowed;
   }
 
-  &__nav-button--right{
+  & &__nav-button--right{
     display: none;
     rotate: 180deg;
   }
 
-  &__nav-button-icon {
+  & &__arrow-icon-img {
     width: 11px;
     height: 18px;
   }
 
-  &__user-button {
+  & &__user-button {
     width: 177px;
     height: 44px;
     background-color: pallete.get-color(background, alpha-70);
     border-radius: 50px;
     display: none;
     justify-content: flex-start;
-    align-items: center;
   }
 
-  &__user-button::after {
+  & &__user-button::after {
     content: "Julita Gomez";
     padding: 10px 16px;
     display: none;
@@ -114,11 +152,11 @@
     align-items: center;
   }
 
-  &__user-button:hover::after {
+  & &__user-button:hover::after {
     display: flex;
   }
 
-  &__user-button-icon {
+  & &__user-button-icon {
     width: 38px;
     height: 38px;
     margin: 0 12px 0 3px;
@@ -127,58 +165,217 @@
     overflow: hidden;
   }
 
-  &__user-name {
+  & &__user-name {
+    font-size: initial;
     text-align: center;
   }
-}
 
-/* Extra small devices (phones) */
-@media only screen and (max-width: 833px) {
-  .playlist-page {
-    min-width: 375px;
-  }
-}
-
-/* Medium devices (tablets) */
-@media only screen and (min-width: 834px) {
-  .playlist-page-header-component {
-    background-position: right 50% top 0;
-  }
-}
-
-/* slarge devices (laptops and desktops) */
-@media only screen and (min-width: 1440px) {
-  .playlist-page {
-    width: 1440px;
-  }
-
-  .playlist-page-header-component {
-    background-position: right 0 top -68px;
-    background-size: cover;
-
-    &__content-container {
-      width: 356px;
-      top: 156px;
-      left: 50px;
-      gap: 24px
-    }
-
-    &__title {
-      width: 338px;
-    }
-  }
-
-  .playlist-page-navigation-component {
-    &__buttons-container {
+  /* large devices (laptops and desktops) */
+  @media only screen and (min-width: 1440px) {
+    & &__buttons-container {
       margin: 0 50px;
     }
 
-    &__nav-button--right{
+    & &__nav-button--right{
       display: flex;
     }
 
-    &__user-button {
+    & &__user-button {
       display: flex;
     }
   }
+
+}
+
+.playlist-page-main-component {
+  margin: 0 16px;
+
+  & &__play-control {
+    width: 207px;
+    height: 59px;
+    margin: 32px 0;
+    display: flex;
+    align-items: center;
+    gap: 32px;
+  }
+
+  & &__play-button {
+    width: 59px;
+    height: 59px;
+    border-radius: 74.3px;
+    background-color: pallete.get-color(background, button);
+  }
+
+  & &__play-button-icon {
+    width: 22px;
+    height: 22px;
+  }
+
+  & &__play-button--song {
+    display: none;
+    background-color: inherit;
+    width: 18px;
+    height: 20px;
+  }
+
+  & &__play-button-icon--song {
+    width: 18px;
+    height: 20px;
+  }
+
+  & &__like-button {
+    width: 32px;
+    height: 32px;
+    background-color: inherit;
+  }
+
+  & &__menu-button {
+    width: 52px;
+    height: 52px;
+    background-color: inherit;
+  }
+
+  & &__playlist {
+    min-height: 132px;
+    height: calc(100vh - 570px);
+    overflow-y: scroll;
+    -ms-overflow-style: none; /* for Internet Explorer, Edge */
+    scrollbar-width: none; /* for Firefox */
+  }
+
+  & &__playlist::-webkit-scrollbar {
+    display: none; /* for Chrome, Safari, and Opera */
+  }
+
+  & &__song-container {
+    height: 89px;
+    margin-bottom: 16px;
+    background-color: pallete.get-color(background, static);
+    border-radius: 17px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  & &__song-container:hover {
+    cursor: pointer;
+    background-color: pallete.get-color(background, hover);
+  }
+
+  & &__song-container:hover &__play-button--song {
+    display: flex;
+  }
+
+  & &__song-container:hover &__song-number {
+    display: none;
+  }
+
+  & &__song-controls {
+    margin: 0 24px;
+    width: 100%;
+    position: relative;
+    color: pallete.get-color(primary, complimentary-contrast);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  & &__song-item {
+    height: 56px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 32px;
+  }
+
+  & &__album-cover {
+    width: 56px;
+    height: 56px;
+    color: pallete.get-color(primary, main-contrast);
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+  & &__titles-container {
+    height: 39px;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-around;
+    gap: 6px;
+  }
+
+  & &__titles-container--artist,
+  & &__titles-container--time,
+  & &__like-button--song {
+    display: none;
+  }
+
+  & &__title {
+    color: pallete.get-color(primary, main-contrast);
+  }
+
+  & &__subtitle {
+    font-size: inherit;
+  }
+
+  & &__song-buttons-container {
+    width: 78px;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  & &__menu-button--song {
+    width: 36px;
+    height: 36px;
+  }
+
+  & &__like-button--song, & &__like-icon--song {
+    width: 24px;
+    height: 24px;
+  }
+
+  /* Extra small devices (phones) */
+  @media only screen and (max-width: 833px) {
+  }
+
+  /* Medium devices (tablets) */
+  @media only screen and (min-width: 834px) {
+    & &__titles-container--artist {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      position: absolute;
+      left: 50%;
+    }
+
+  }
+
+  /* large devices (laptops and desktops) */
+  @media only screen and (min-width: 1440px) {
+    margin: 0 50px;
+
+    & &__song-controls {
+      margin: 0 50px;
+    }
+
+    & &__song-buttons-container {
+      flex-direction: row;
+    }
+
+    & &__titles-container--artist {
+      left: 42%;
+    }
+
+    & &__titles-container--time {
+      position: absolute;
+      left: 76%;
+    }
+
+    & &__titles-container--time, & &__like-button--song {
+      display: flex;
+    }
+  }
+
 }

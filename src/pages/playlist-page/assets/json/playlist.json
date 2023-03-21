@@ -1,0 +1,66 @@
+[
+  {
+    "order": "01",
+    "songTitle": "Flowers",
+    "albumTitle": "Flowers",
+    "artistName": "Miley Cyrus",
+    "duration": "3:20",
+    "coverLink": "./src/pages/playlist-page/assets/img/album-flowers.jpg"
+  },
+  {
+    "order": "02",
+    "songTitle": "Kill Bill",
+    "albumTitle": "Sos",
+    "artistName": "Sza",
+    "duration": "2:32",
+    "coverLink": "./src/pages/playlist-page/assets/img/album-sos.jpg"
+  },
+  {
+    "order": "03",
+    "songTitle": "Bad Habit",
+    "albumTitle": "Gemini Rights",
+    "artistName": "Steve Lacy",
+    "duration": "3:52",
+    "coverLink": "./src/pages/playlist-page/assets/img/album-gemini-rights.jpg"
+  },
+  {
+    "order": "04",
+    "songTitle": "Talk To Me",
+    "albumTitle": "Talk To Me",
+    "artistName": "Mark Menday, Seb Mont",
+    "duration": "2:28",
+    "coverLink": "./src/pages/playlist-page/assets/img/album-talk-to-me.jpg"
+  },
+  {
+    "order": "05",
+    "songTitle": "Good 4 u",
+    "albumTitle": "Sour",
+    "artistName": "Olivia Rodrigo",
+    "duration": "2:58",
+    "coverLink": "./src/pages/playlist-page/assets/img/album-sour.jpg"
+  },
+  {
+    "order": "06",
+    "songTitle": "INDUSTRY BABY",
+    "albumTitle": "Singiel",
+    "artistName": "Lil Nas X",
+    "duration": "3:32",
+    "coverLink": "./src/pages/playlist-page/assets/img/album-singiel.jpg"
+  },
+  {
+    "order": "07",
+    "songTitle": "Watermelon Sugar",
+    "albumTitle": "Fine Line",
+    "artistName": "Harry Styles",
+    "duration": "2:54",
+    "coverLink": "./src/pages/playlist-page/assets/img/album-fine-Line.jpg"
+  },
+  {
+    "order": "08",
+    "songTitle": "Always",
+    "albumTitle": "Fine Line",
+    "artistName": "Isak Daniels",
+    "duration": "3:33",
+    "coverLink": "./src/pages/playlist-page/assets/img/album-fine-Line-always.jpg"
+  }
+]

@@ -13,38 +13,32 @@
         <nav class="playlist-page-navigation-component">
           <div class="playlist-page-navigation-component__buttons-container">
             <div class="playlist-page-navigation-component__nav-buttons-container">
-              <button class="playlist-page-navigation-component__nav-button"
-                    type="button">
-                <div class="playlist-page-navigation-component__nav-button-icon">
-                  <img src="./src/pages/playlist-page/assets/icons/arrow-icon.svg"
-                      class="playlist-page-navigation-component__arrow-icon-img playlist-page-navigation-component__nav-button--left"
-                      alt="topic icon"
-                      width="10.57"
-                      height="18">
-                </div>
+              <button class="playlist-page-navigation-component__nav-button playlist-page-navigation-component__nav-button--left"
+                      type="button">
+                <img src="./src/pages/playlist-page/assets/icons/arrow-icon.svg"
+                    class="playlist-page-navigation-component__arrow-icon-img"
+                    alt="topic icon"
+                    width="11"
+                    height="18">
               </button>
 
               <button class="playlist-page-navigation-component__nav-button playlist-page-navigation-component__nav-button--right"
                     type="button">
-                <div class="playlist-page-navigation-component__nav-button-icon">
                   <img src="./src/pages/playlist-page/assets/icons/arrow-icon.svg"
                     class="playlist-page-navigation-component__arrow-icon-img"
                     alt="topic icon"
                     width="10"
                     height="18">
-                </div>
-            </button>
+              </button>
             </div>
             <button class="playlist-page-navigation-component__user-button"
                     type="button">
-                <div class="playlist-page-navigation-component__user-button-icon">
-                  <img src="./src/pages/playlist-page/assets/img/user-icon.jpg"
-                      class="playlist-page-navigation-component__arrow-icon-img"
-                      alt="topic icon"
-                      width="38"
-                      height="38">
-                </div>
-                <p class="playlist-page-navigation-component__user-name">Julita Gomez</p>
+              <img src="./src/pages/playlist-page/assets/img/user-icon.jpg"
+                    class="playlist-page-navigation-component__user-button-icon"
+                    alt="user icon"
+                    width="38"
+                    height="38">
+              <span class="playlist-page-navigation-component__user-name">Julita Gomez</span>
             </button>
           </div>
         </nav>
@@ -59,16 +53,98 @@
             Popular songs of Dua Lipa and many many others
           </h4>
         </div>
-
       </header>
-      <main>
-        <h1>H1</h1>
-        <h2>H2</h2>
-        <h3>H3</h3>
-        <h4>H4</h4>
-        <p>p</p>
+
+      <main class="playlist-page-main-component">
+        <div class="playlist-page-main-component__play-control">
+          <button class="playlist-page-main-component__play-button"
+                type="button">
+            <img src="./src/pages/playlist-page/assets/icons/play-button-arrow-icon.svg"
+                class="playlist-page-main-component__play-button-icon"
+                alt="play button icon"
+                width="22"
+                height="22">
+          </button>
+          <button class="playlist-page-main-component__like-button"
+                  type="button">
+            <img src="./src/pages/playlist-page/assets/icons/heart-icon.svg"
+                  class="playlist-page-main-component__like-icon"
+                  alt="like button icon"
+                  width="32"
+                  height="32">
+          </button>
+          <button class="playlist-page-main-component__menu-button"
+                type="button">
+            <img src="./src/pages/playlist-page/assets/icons/menu-vertical-line-icon.svg"
+                class="playlist-page-main-component__menu-button-icon"
+                alt="menu button icon"
+                width="52"
+                height="52">
+          </button>
+        </div>
+        <div class="playlist-page-main-component__playlist">
+          <!-- Place for song items -->
+        </div>
       </main>
     </div>
+
+    <template id="song-template">
+      <div class="playlist-page-main-component__song-container">
+        <div class="playlist-page-main-component__song-controls">
+          <div class="playlist-page-main-component__song-item">
+            <h2 class="playlist-page-main-component__song-number"></h2>
+            <button class="playlist-page-main-component__play-button playlist-page-main-component__play-button--song"
+                  type="button">
+              <img src="./src/pages/playlist-page/assets/icons/play-button-white-arrow-icon.svg"
+                  class="playlist-page-main-component__play-button-icon playlist-page-main-component__play-button-icon--song"
+                  alt="play button icon"
+                  width="18"
+                  height="20">
+            </button>
+            <div class="playlist-page-main-component__album-cover">
+              <img src="#"
+                  class="playlist-page-main-component__album-cover-img"
+                  alt="album cover"
+                  width="56"
+                  height="56">
+            </div>
+            <div class="playlist-page-main-component__titles-container">
+              <h3 class="playlist-page-main-component__title"></h3>
+              <p class="playlist-page-main-component__subtitle"></p>
+            </div>
+          </div>
+          <div class="playlist-page-main-component__titles-container playlist-page-main-component__titles-container--artist">
+            <h3 class="playlist-page-main-component__title playlist-page-main-component__title--artist"></h3>
+            <p class="playlist-page-main-component__subtitle">Artists</p>
+          </div>
+          <div class="playlist-page-main-component__titles-container playlist-page-main-component__titles-container--time">
+            <h3 class="playlist-page-main-component__title playlist-page-main-component__title--time"></h3>
+            <p class="playlist-page-main-component__subtitle">Time</p>
+          </div>
+          <div class="playlist-page-main-component__song-buttons-container">
+            <button class="playlist-page-main-component__like-button playlist-page-main-component__like-button--song"
+                    type="button">
+              <img src="./src/pages/playlist-page/assets/icons/heart-icon.svg"
+                    class="playlist-page-main-component__like-icon--song"
+                    alt="like button icon"
+                    width="24"
+                    height="24">
+            </button>
+            <button class="playlist-page-main-component__menu-button playlist-page-main-component__menu-button--song"
+                    type="button">
+              <img src="./src/pages/playlist-page/assets/icons/menu-vertical-line-icon.svg"
+                    class="playlist-page-main-component__menu-button-icon"
+                    alt="menu button icon"
+                    width="36"
+                    height="36">
+            </button>
+          </div>
+        </div>
+      </div>
+    </template>
+
     <script type="module" src="./src/global-scripts/main.js"></script>
   </body>
 </html>
+
+
