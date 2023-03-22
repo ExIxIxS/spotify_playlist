@@ -2,8 +2,13 @@
 
 .playlist-page {
   margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 
   /* Extra small devices (phones) */
   @media only screen and (max-width: 833px) {
@@ -23,6 +28,8 @@
 
 .playlist-page-header-component {
   height: 434px;
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.2)), to(rgba(0, 0, 0, 0.2))), url(../assets/img/header-bg-image.jpg) no-repeat;
+  background: -o-linear-gradient(bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../assets/img/header-bg-image.jpg) no-repeat;
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../assets/img/header-bg-image.jpg) no-repeat;
   background-position: right 15% top 0;
   background-size: cover;
@@ -32,23 +39,36 @@
     position: relative;
     top: 151px;
     left: 32px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
     gap: 16px
   }
 
   & &__title {
-    order: 1;
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
     width: 238px;
   }
 
   & &__subtitle {
-    order: 0;
+    -webkit-box-ordinal-group: 1;
+        -ms-flex-order: 0;
+            order: 0;
   }
 
   & &__description {
-    order: 2;
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
     color: pallete.get-color(primary, complimentary-contrast);
   }
 
@@ -83,23 +103,37 @@
 .playlist-page-navigation-component {
   height: 84px;
   background-color: pallete.get-color(background, alpha-50);
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   position: sticky;
   top: 0;
 
   & &__buttons-container {
     width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     margin: 0 16px;
   }
 
   & &__nav-buttons-container {
     width: 116px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
 
   & &__nav-button {
@@ -129,7 +163,9 @@
     background-color: pallete.get-color(background, alpha-70);
     border-radius: 50px;
     display: none;
-    justify-content: flex-start;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
   }
 
   & &__user-button::after {
@@ -143,16 +179,17 @@
     height: 39px;
     text-align: center;
     background-color: pallete.get-color(background, alpha-70);
-    -moz-border-radius: 8px;
-    -webkit-border-radius: 8px;
-    -ms-border-radius: 8px;
     border-radius: 8px;
     font-size: 16px;
     line-height: 19px;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 
   & &__user-button:hover::after {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
   }
 
@@ -166,7 +203,10 @@
   }
 
   & &__user-name {
-    font-size: initial;
+    font-weight: 700;
+    font-size: 16px;
+    letter-spacing: 0;
+    line-height: 19px;
     text-align: center;
   }
 
@@ -177,10 +217,14 @@
     }
 
     & &__nav-button--right{
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
     }
 
     & &__user-button {
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
     }
   }
@@ -194,8 +238,12 @@
     width: 207px;
     height: 59px;
     margin: 32px 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     gap: 32px;
   }
 
@@ -252,9 +300,15 @@
     margin-bottom: 16px;
     background-color: pallete.get-color(background, static);
     border-radius: 17px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 
   & &__song-container:hover {
@@ -263,6 +317,8 @@
   }
 
   & &__song-container:hover &__play-button--song {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
   }
 
@@ -275,17 +331,31 @@
     width: 100%;
     position: relative;
     color: pallete.get-color(primary, complimentary-contrast);
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 
   & &__song-item {
     height: 56px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    column-gap: 32px;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-column-gap: 32px;
+       -moz-column-gap: 32px;
+            column-gap: 32px;
   }
 
   & &__album-cover {
@@ -298,9 +368,15 @@
 
   & &__titles-container {
     height: 39px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column-reverse;
-    justify-content: space-around;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
     gap: 6px;
   }
 
@@ -320,10 +396,19 @@
 
   & &__song-buttons-container {
     width: 78px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: row-reverse;
-    justify-content: space-between;
-    align-items: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 
   & &__menu-button--song {
@@ -361,7 +446,10 @@
     }
 
     & &__song-buttons-container {
-      flex-direction: row;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: row;
+              flex-direction: row;
     }
 
     & &__titles-container--artist {
@@ -374,6 +462,8 @@
     }
 
     & &__titles-container--time, & &__like-button--song {
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
     }
   }

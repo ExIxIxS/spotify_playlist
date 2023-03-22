@@ -7,11 +7,13 @@
 @import "styles/fonts.scss";
 
 html {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 *, *::before, *::after {
-  box-sizing: inherit;
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
 }
 
 body {
@@ -26,9 +28,15 @@ button {
   border-width: 0;
   padding: 0;
   color: inherit;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 button:hover {
@@ -38,20 +46,4 @@ button:hover {
 img {
   width: 100%;
   height: auto;
-}
-
-
-/* Extra small devices (phones) */
-@media only screen and (max-width: 833px) {
-
-}
-
-/* Medium devices (tablets) */
-@media only screen and (min-width: 834px) {
-
-}
-
-/* Large devices (laptops and desktops) */
-@media only screen and (min-width: 1440px) {
-
 }
